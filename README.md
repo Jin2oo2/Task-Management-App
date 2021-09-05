@@ -7,6 +7,7 @@ I used Vue.js on this app.
 * Add sections and tasks(e.g. Monday, Go shopping)
 * Edit secions/tasks 
 * Delete tasks
+* Reset everything by clicking a button
 
 ## URL
 https://jin2oo2.github.io/Task-Management-App/

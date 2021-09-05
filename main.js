@@ -49,7 +49,7 @@ Vue.component('task', {
                 <i class="fas fa-edit grey mx-2"　v-on:click="editTaskName()"></i>
             </div>
             <select class="form-select" v-model="selected" disabled>
-                <option v-for="(section, index) in sections" :value="index">{{ index }}</option>
+                <option v-for="(section, index) in sections" :value="index">{{ section.title }}</option>
             </select>               
             <p class="card-text text-muted my-4">{{ task.description }}</p>
             <div class="d-flex justify-content-end">
@@ -137,5 +137,10 @@ var vm = new Vue ({
             this.sections.push({title: this.newSectionTitle, tasks: []});
             this.newSectionTitle = '';
         },
+
+        resetAll: function(){
+            let result = window.confirm('Are you sure?');
+            if(result) this.sections = [];
+        }
     }
 })
