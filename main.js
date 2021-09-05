@@ -34,12 +34,20 @@ Vue.component('task', {
         editContent: function(){
             let result = window.prompt('Do you edit the content?', this.task.description)
             if(result != null) this.task.description = result;
+        },
+
+        editTaskName: function(){
+            let result = window.prompt('Do you edit the task name?', this.task.name)
+            if(result != null) this.task.name = result;
         }
     },
     template: `
     <div class="card card-shadow mb-2">
         <div class="card-body">
-            <h5 class="card-title">{{ task.name }}</h5>
+            <div class="d-flex">
+                <h5 class="card-title">{{ task.name }}</h5>
+                <i class="fas fa-edit grey mx-2"　v-on:click="editTaskName()"></i>
+            </div>
             <select class="form-select" v-model="selected" disabled>
                 <option v-for="(section, index) in sections" :value="index">{{ index }}</option>
             </select>               
