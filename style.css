@@ -1,0 +1,19 @@
+.grey {
+    color: grey;
+}
+
+.yellow {
+    color: rgb(228, 228, 13);
+}
+
+.green {
+    color: greenyellow;
+}
+
+.card-shadow {
+    box-shadow: 2px 2px 4px;
+}
+
+.fa-trash:hover {
+    color: red;
+}
